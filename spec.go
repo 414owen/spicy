@@ -272,7 +272,7 @@ func ParseSpec(r io.Reader) (*Spec, error) {
 	}
 
 	specAst := &SpecAst{}
-	err = parser.Parse(r, specAst)
+	err = parser.Parse("", r, specAst)
 	if err != nil {
 		return nil, err
 	}
